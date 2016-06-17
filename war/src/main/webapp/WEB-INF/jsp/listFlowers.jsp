@@ -9,25 +9,16 @@
 
 <body>
 
-<%--
-<form:form commandName="userInput">
-
-        Search accounts <form:select path="invoiceStatus"
-		items="${stringList}" /> current invoice by subscriber name:<br />
-	<form:input path="nameFragment" />
+<form:form method="GET" action="flowerDetail.do">
+	<input type="text" id="id" name="id" />
 	<input type="submit" value="Search" />
-	<br />
-	<span class="displaynumber" style="font-size: 90%"> Display up
-	to <form:input path="maxAccountNum" maxlength="2" size="2"
-		cssStyle="font-size:90%" /> relevant accounts. </span>
 </form:form>
---%>
 
 <c:if test="${(flowerList ne null) and (empty flowerList)}">
         Sorry no result matches...
 </c:if>
 <c:if test="${not empty flowerList}">
-	<table border="0">
+	<table>
 		<thead>
 			<tr>
 				<th>ID</th>

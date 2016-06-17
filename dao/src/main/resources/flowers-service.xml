@@ -19,7 +19,6 @@
 
    <context:component-scan base-package="org.jboss.spring.examples.primrose.dao" />
    
-   <!-- replace "hibernate5" with "hibernate4" if running on WildFly 9.0.1.Final -->
    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="exampleDS"/>
         <property name="mappingLocations">

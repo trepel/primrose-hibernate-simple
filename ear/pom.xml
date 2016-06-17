@@ -39,6 +39,18 @@
          <groupId>org.springframework</groupId>
          <artifactId>spring-tx</artifactId>
       </dependency>
+      
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-web</artifactId>
+      </dependency>
+      <!-- This can't be defined here, because it would go into <this-ear>/lib directory -->
+      <!-- and the <this-ear>/lib/spring-webmvc.jar/META-INF/spring-form.tld is not loaded -->
+      <!-- It must be in <this-ear>/<this-war>/WEB-INF/lib directory -->
+<!--       <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-webmvc</artifactId>
+      </dependency> -->
    </dependencies>
 
    <build>

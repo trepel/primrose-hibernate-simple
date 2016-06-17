@@ -14,8 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FlowerController
 {
-   private static final Double CAN_VOLUME = 0.5d;
-
    @Autowired
    FlowerDao flowerService;
 

@@ -9,9 +9,7 @@
    <name>Primrose Simple Parent</name>
    
    <properties>
-        <!-- replace with 9.0.1.Final and run on WildFly 9.0.1.Final -->
-        <!-- don't forget to replace "hibernate5" with "hibernate4" in dao/src/main/resources/flowers-service.xml -->
-        <org.wildfly.bom.version>10.0.0.Beta1</org.wildfly.bom.version>
+        <org.wildfly.bom.version>10.0.1.Final</org.wildfly.bom.version>
     </properties>
 
     <dependencyManagement>
@@ -19,7 +17,7 @@
             <!--  JAVA EE 7 -->
              <dependency>
                 <groupId>org.wildfly.bom</groupId>
-                <artifactId>jboss-javaee-7.0-wildfly</artifactId>
+                <artifactId>wildfly-javaee7</artifactId>
                 <version>${org.wildfly.bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -29,7 +27,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>4.2.0.RELEASE</version>
+                <version>4.2.6.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -49,7 +47,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.3</version>
+                    <version>3.5.1</version>
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>
@@ -58,7 +56,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.7</version>
+                    <version>3.0.1</version>
                     <configuration>
                         <encoding>UTF-8</encoding>
                     </configuration>
@@ -71,12 +69,12 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.4.0</version>
+                    <version>1.5.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>2.6.1</version>
+                    <version>3.0.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>
